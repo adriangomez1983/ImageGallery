@@ -55,7 +55,7 @@ GET
 lists all of the stored files
 
 GET
-/files/<filename>.<extension>
+/files/{filename}.{extension}
 gets the stored image with the given filename and extension
 
 ##### Error Handling and validations
