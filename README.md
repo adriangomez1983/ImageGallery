@@ -79,7 +79,7 @@ The client is an iOS application that retireves the previously uploaded images l
 For the implementation I've followed MVP and used dependecy injection for easier testing.
 
 #### Third-party libraries
-I've used Alamofire for networking and AlamoImage for images loading
+I've used Alamofire for networking, AlamoImage for images loading and SwiftyJSON for JSON handling
 
 #### Testing
 The main focus on the unit test was the behaviour of the presenters
