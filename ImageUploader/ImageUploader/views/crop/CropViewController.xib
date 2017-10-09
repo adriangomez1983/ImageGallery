@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CropViewController" customModule="ImageUploader" customModuleProvider="target">
+            <connections>
+                <outlet property="cropAreaView" destination="g3p-m8-dop" id="EG9-vc-aKj"/>
+                <outlet property="imageView" destination="4ge-KT-vbu" id="o1C-Ql-BMV"/>
+                <outlet property="scrollView" destination="Znv-EQ-hP7" id="hQA-LL-Py8"/>
+                <outlet property="view" destination="iN0-l3-epB" id="76X-g4-8X5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Znv-EQ-hP7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ge-KT-vbu">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4ge-KT-vbu" secondAttribute="bottom" id="1cE-b6-vPg"/>
+                        <constraint firstAttribute="trailing" secondItem="4ge-KT-vbu" secondAttribute="trailing" id="9vN-3e-Ppc"/>
+                        <constraint firstItem="4ge-KT-vbu" firstAttribute="centerY" secondItem="Znv-EQ-hP7" secondAttribute="centerY" id="I0c-fr-bki"/>
+                        <constraint firstItem="4ge-KT-vbu" firstAttribute="leading" secondItem="Znv-EQ-hP7" secondAttribute="leading" id="IaE-7B-GZc"/>
+                        <constraint firstItem="4ge-KT-vbu" firstAttribute="centerX" secondItem="Znv-EQ-hP7" secondAttribute="centerX" id="i2N-LA-RaO"/>
+                        <constraint firstItem="4ge-KT-vbu" firstAttribute="top" secondItem="Znv-EQ-hP7" secondAttribute="top" id="mPB-Ki-xWL"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3p-m8-dop" customClass="CropAreaView" customModule="ImageUploader" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="227.5" width="375" height="211"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="g3p-m8-dop" secondAttribute="height" multiplier="16:9" id="fgv-PN-56T"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Znv-EQ-hP7" secondAttribute="trailing" id="0WF-cB-1lW"/>
+                <constraint firstAttribute="trailing" secondItem="g3p-m8-dop" secondAttribute="trailing" id="3HG-ih-Nvd"/>
+                <constraint firstItem="Znv-EQ-hP7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8xG-zN-7Xw"/>
+                <constraint firstItem="g3p-m8-dop" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9Pz-My-88T"/>
+                <constraint firstAttribute="bottom" secondItem="Znv-EQ-hP7" secondAttribute="bottom" id="RJO-e2-0Ze"/>
+                <constraint firstItem="g3p-m8-dop" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TxE-iU-JTP"/>
+                <constraint firstItem="Znv-EQ-hP7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ybr-fa-Eyc"/>
+            </constraints>
+            <point key="canvasLocation" x="39.5" y="111.5"/>
+        </view>
+    </objects>
+</document>
