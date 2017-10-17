@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>ImageUploaderTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E834402B1F8A8F5C0017E037</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E834403F1F8A8F5C0017E037</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E834404A1F8A8F5C0017E037</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

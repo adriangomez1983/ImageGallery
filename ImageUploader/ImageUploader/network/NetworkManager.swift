@@ -44,14 +44,10 @@ class DefaultNetworkManager: NetworkManager {
             DispatchQueue.global().async {
                 Alamofire.upload(multipartFormData: { multipartFormData in
                     multipartFormData.append(body, withName: "file", fileName: fileName, mimeType: "image/png")
-                }, with: urlRequest, encodingCompletion: { result in
+                }, with: urlRequest, encodingCompletion: { [unowned self] result in
                     switch result {
                     case .success(let uploadRequest, _, _):
-                        uploadRequest.responseString { response in
-                            DispatchQueue.main.async {
-                                completionHandler?(nil)
-                            }
-                        }
+                        self.validateServerResponse(uploadRequest, completionHandler: completionHandler, errorHandler: errorHandler)
                         break
                     case .failure(let error):
                         let serviceError = ImagesServiceError(description: error.localizedDescription, message: nil, code: 400)
@@ -78,7 +74,6 @@ class DefaultNetworkManager: NetworkManager {
                 Alamofire.request(url, method: .get, headers: headers)
                     .validate(statusCode: 200..<400)
                     .responseJSON { response in
-                        guard let httpResponseCode = response.response?.statusCode else { return }
                         switch response.result {
                         case .success(let value):
                             DispatchQueue.main.async {
@@ -86,7 +81,7 @@ class DefaultNetworkManager: NetworkManager {
                             }
                             break
                         case .failure(let error):
-                            let serviceError = ImagesServiceError(description: error.localizedDescription, message: nil, code: httpResponseCode)
+                            let serviceError = ImagesServiceError(description: error.localizedDescription, message: nil, code: response.response?.statusCode ?? 500)
                             DispatchQueue.main.async {
                                 errorHandler?(serviceError)
                             }
@@ -94,5 +89,20 @@ class DefaultNetworkManager: NetworkManager {
                         }
                 }
             }
+    }
+    
+    func validateServerResponse(_ uploadRequest: UploadRequest, completionHandler: ((Any?) -> Void)?, errorHandler: ((ServiceError) -> Void)?) {
+        uploadRequest.response(completionHandler: { (response) in
+            if let error = response.error {
+                DispatchQueue.main.async {
+                    errorHandler?(ImagesServiceError(description: error.localizedDescription, message: nil, code: 500))
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completionHandler?(nil)
+                }
+                
+            }
+        })
     }
 }

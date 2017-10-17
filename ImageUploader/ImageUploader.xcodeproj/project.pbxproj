@@ -45,6 +45,7 @@
 		E83440B11F8AADF50017E037 /* FailingServiceImageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83440B01F8AADF50017E037 /* FailingServiceImageMock.swift */; };
 		E83440B41F8AB1AB0017E037 /* CropPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83440B31F8AB1AB0017E037 /* CropPresenterTests.swift */; };
 		E83440B91F8AE3CF0017E037 /* ImageUploaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83440B81F8AE3CF0017E037 /* ImageUploaderUITests.swift */; };
+		E8C1A5171F95FFD900D57B0D /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1A5161F95FFD900D57B0D /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		E83440B01F8AADF50017E037 /* FailingServiceImageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingServiceImageMock.swift; sourceTree = "<group>"; };
 		E83440B31F8AB1AB0017E037 /* CropPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPresenterTests.swift; sourceTree = "<group>"; };
 		E83440B81F8AE3CF0017E037 /* ImageUploaderUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploaderUITests.swift; sourceTree = "<group>"; };
+		E8C1A5161F95FFD900D57B0D /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				E83440AE1F8AADAD0017E037 /* ImagesServiceMock.swift */,
 				E83440B01F8AADF50017E037 /* FailingServiceImageMock.swift */,
 				E83440B31F8AB1AB0017E037 /* CropPresenterTests.swift */,
+				E8C1A5161F95FFD900D57B0D /* NetworkManagerTests.swift */,
 			);
 			path = ImageUploaderTests;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				E83440AD1F8AAD650017E037 /* UploadPresenterTests.swift in Sources */,
 				E83440B41F8AB1AB0017E037 /* CropPresenterTests.swift in Sources */,
 				E83440AB1F8AA5EF0017E037 /* GalleryPresenterTest.swift in Sources */,
+				E8C1A5171F95FFD900D57B0D /* NetworkManagerTests.swift in Sources */,
 				E83440AF1F8AADAD0017E037 /* ImagesServiceMock.swift in Sources */,
 				E83440B11F8AADF50017E037 /* FailingServiceImageMock.swift in Sources */,
 			);
