@@ -1,0 +1,2 @@
+insert into image (id, created_at, description, display_name, favorite, main, url) values ('b214e7c6-b072-47c8-92e7-f902cecea999', current_timestamp, '', 'heartRed22.png', false, false, 'http://localhost:8080/files/image-data/12f06d27-835f-4b0d-9af6-58ed413ecccc');
+insert into image (id, created_at, description, display_name, favorite, main, url) values ('b214e7c6-b072-47c8-92e7-f902cecea888', current_timestamp, '', 'heartRed22.png', false, false, 'http://localhost:8080/files/image-data/12f06d27-835f-4b0d-9af6-58ed413eaaaa');

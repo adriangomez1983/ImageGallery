@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1EAA98DB1F0B214E9D0C41082820093"
+               BlueprintIdentifier = "46DA8DDF904893B126AA3DA5BEE2BC00"
                BuildableName = "Pods_ImageUploader.framework"
                BlueprintName = "Pods-ImageUploader"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1EAA98DB1F0B214E9D0C41082820093"
+            BlueprintIdentifier = "46DA8DDF904893B126AA3DA5BEE2BC00"
             BuildableName = "Pods_ImageUploader.framework"
             BlueprintName = "Pods-ImageUploader"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -4,4 +4,5 @@ target 'ImageUploader' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'AlamofireImage'
+  pod 'IQKeyboardManagerSwift', '5.0.0'
 end

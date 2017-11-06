@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ImageUploader/presenters/UploadPresenter.swift"
-            timestampString = "529921497.546902"
+            filePath = "ImageUploader/network/NetworkManager.swift"
+            timestampString = "531185618.127505"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "uploadImage(_:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "postMultipart(_:httpHeaders:body:fileName:onCompletion:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ImageUploader/presenters/UploadPresenter.swift"
-            timestampString = "529921497.55198"
+            filePath = "ImageUploader/network/NetworkManager.swift"
+            timestampString = "531185618.128206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "uploadImage(_:)"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "validateServerResponse(_:completionHandler:errorHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploader/presenters/ImagesPresenter.swift"
+            timestampString = "531190200.073057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "deleteImage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

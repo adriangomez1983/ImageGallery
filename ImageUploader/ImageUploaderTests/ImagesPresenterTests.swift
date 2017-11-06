@@ -15,6 +15,7 @@ class ImagesViewMock: ImagesView {
     var errorShown = false
     var startLoadingCalled = false
     var finishLoadingCalled = false
+    var profilePictureURL: URL?
     
     func setImages(_ images: [ImageViewData]) {
         imagesSet = true
@@ -38,6 +39,10 @@ class ImagesViewMock: ImagesView {
     func presentUploadController(_ uploadController: UploadViewController) {}
     
     func presentGallery(_ galleryController: ImageGalleryViewController) {}
+    
+    func setProfilePicture(_ imageURL: URL) {
+        profilePictureURL = imageURL
+    }
 }
 
 
@@ -93,5 +98,22 @@ class ImagesPresenterTests: XCTestCase {
         XCTAssert(imagesView.startLoadingCalled)
         XCTAssert(imagesView.finishLoadingCalled)
         XCTAssert(imagesView.errorShown)
+    }
+    
+    func testProfilePicture() {
+        let nonEmptySpecificServiceMock = ImagesServiceMock(images: [Image(url: URL(string: "http://some.url.com")!, displayName: "a name to display"),
+                                                             Image(url: URL(string: "http://someOther.url.com")!, displayName: "another name to display")])
+        
+        let imagesView = ImagesViewMock()
+        let presenter = ImagesPresenter(service: nonEmptySpecificServiceMock)
+        presenter.attachView(imagesView)
+        presenter.setBiggerImage(0)
+        
+        XCTAssertNotNil(imagesView.profilePictureURL)
+        XCTAssertEqual(imagesView.profilePictureURL, URL(string: "http://some.url.com"))
+        
+        presenter.setBiggerImage(1)
+        XCTAssertNotNil(imagesView.profilePictureURL)
+        XCTAssertEqual(imagesView.profilePictureURL, URL(string: "http://someOther.url.com"))
     }
 }

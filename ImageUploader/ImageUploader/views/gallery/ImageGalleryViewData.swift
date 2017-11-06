@@ -10,5 +10,6 @@ import Foundation
 
 struct ImageGalleryViewData {
     let url: URL
-    let description: String
+    let displayName: String
+    let description: String?
 }

@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,13 +55,14 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Kfo-xg-y2m" secondAttribute="bottom" id="VUm-F8-77K"/>
                 <constraint firstItem="Kfo-xg-y2m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WzT-E1-aSH"/>
                 <constraint firstItem="Kfo-xg-y2m" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="byL-Of-MqN"/>
-                <constraint firstItem="wEy-Lp-2PH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="j6m-WN-j6S"/>
                 <constraint firstItem="Kfo-xg-y2m" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="l15-GB-tQP"/>
+                <constraint firstItem="wEy-Lp-2PH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tCQ-5Z-ELh"/>
                 <constraint firstItem="Wvr-1e-iHW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tNV-ek-YAH"/>
                 <constraint firstItem="wEy-Lp-2PH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="w4m-bE-oyb"/>
                 <constraint firstItem="Wvr-1e-iHW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yrh-bv-qcc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

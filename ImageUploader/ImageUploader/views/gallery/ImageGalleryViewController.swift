@@ -11,6 +11,8 @@ import UIKit
 import AlamofireImage
 
 class ImageGalleryViewController: UIViewController {
+    @IBOutlet weak var imageDisplayNamelabel: UILabel!
+    @IBOutlet weak var imageDescriptionLabel: UILabel!
     @IBOutlet weak var nextArrow: UIImageView!
     @IBOutlet weak var prevArrow: UIImageView!
     @IBOutlet weak var prevArea: UIView!
@@ -63,6 +65,8 @@ extension ImageGalleryViewController: ImageGalleryView {
     func setImage(_ image: ImageGalleryViewData, onCompleted completion: (() -> Void)?) {
         imageView.af_setImage(withURL: image.url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"), completion: { _ in
             completion?() })
+        imageDisplayNamelabel.text = image.displayName
+        imageDescriptionLabel.text = image.description ?? ""
     }
 
     func disableNext() {

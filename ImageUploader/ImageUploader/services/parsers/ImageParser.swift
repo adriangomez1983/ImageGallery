@@ -13,5 +13,7 @@ extension Image: Parsable {
   init(json: JSON) {
     url = json["url"].url!
     displayName = json["displayName"].stringValue
+    description = json["description"].string
+    isMain = json["main"].boolValue
   }
 }

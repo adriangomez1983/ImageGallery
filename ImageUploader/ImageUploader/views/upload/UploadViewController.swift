@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 class UploadViewController: UIViewController {
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -23,10 +24,16 @@ class UploadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBarAddButton()
+        configureDescriptionTextView()
         configureImagePicker()
         configureActionSheet()
         configurePreview()
         presenter.attachView(self)
+    }
+    
+    private func configureDescriptionTextView() {
+        descriptionTextView.text = ""
+        descriptionTextView.delegate = presenter
     }
     
     private func configureActionSheet() {
@@ -68,7 +75,7 @@ class UploadViewController: UIViewController {
     }
     
     @IBAction func uploadAction(_ sender: Any) {
-        presenter.uploadImage(previewImageView.image)
+        presenter.uploadImage(previewImageView.image, description: descriptionTextView.text)
     }
     
     @IBAction func rotateAction(_ sender: Any) {

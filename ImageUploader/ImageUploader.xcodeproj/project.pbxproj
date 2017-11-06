@@ -46,6 +46,8 @@
 		E83440B41F8AB1AB0017E037 /* CropPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83440B31F8AB1AB0017E037 /* CropPresenterTests.swift */; };
 		E83440B91F8AE3CF0017E037 /* ImageUploaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83440B81F8AE3CF0017E037 /* ImageUploaderUITests.swift */; };
 		E8C1A5171F95FFD900D57B0D /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1A5161F95FFD900D57B0D /* NetworkManagerTests.swift */; };
+		E8C1A51B1F9B411B00D57B0D /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1A51A1F9B411B00D57B0D /* ProfileTableViewCell.swift */; };
+		E8C1A51D1F9B414800D57B0D /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8C1A51C1F9B414800D57B0D /* ProfileTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		E83440B31F8AB1AB0017E037 /* CropPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPresenterTests.swift; sourceTree = "<group>"; };
 		E83440B81F8AE3CF0017E037 /* ImageUploaderUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploaderUITests.swift; sourceTree = "<group>"; };
 		E8C1A5161F95FFD900D57B0D /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		E8C1A51A1F9B411B00D57B0D /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		E8C1A51C1F9B414800D57B0D /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +329,8 @@
 			children = (
 				E834407B1F8A91AD0017E037 /* FilesTableViewCell.swift */,
 				E834407A1F8A91AD0017E037 /* FilesTableViewCell.xib */,
+				E8C1A51A1F9B411B00D57B0D /* ProfileTableViewCell.swift */,
+				E8C1A51C1F9B414800D57B0D /* ProfileTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				E83440A41F8A95390017E037 /* services.plist in Resources */,
 				E83440A21F8A93BB0017E037 /* ImageGalleryViewController.xib in Resources */,
 				E834409E1F8A93A10017E037 /* ImagesViewController.xib in Resources */,
+				E8C1A51D1F9B414800D57B0D /* ProfileTableViewCell.xib in Resources */,
 				E834409F1F8A93AA0017E037 /* CropViewController.xib in Resources */,
 				E83440A01F8A93B00017E037 /* FilesTableViewCell.xib in Resources */,
 				E83440A31F8A94050017E037 /* Assets.xcassets in Resources */,
@@ -538,6 +545,7 @@
 			files = (
 				E834408A1F8A931A0017E037 /* Image.swift in Sources */,
 				E834408B1F8A931A0017E037 /* ImageGalleryViewController.swift in Sources */,
+				E8C1A51B1F9B411B00D57B0D /* ProfileTableViewCell.swift in Sources */,
 				E834408C1F8A931A0017E037 /* ImageGalleryViewData.swift in Sources */,
 				E834408D1F8A931A0017E037 /* UploadViewController.swift in Sources */,
 				E834408E1F8A931A0017E037 /* FilesTableViewCell.swift in Sources */,

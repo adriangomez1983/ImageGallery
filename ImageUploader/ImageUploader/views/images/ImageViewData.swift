@@ -9,6 +9,9 @@
 import Foundation
 
 struct ImageViewData {
-    let url: URL
-    let fileName: String
+    let images: [Image]
+    
+    func mainImage() -> Image {
+        return images.filter { $0.isMain }.first!
+    }
 }

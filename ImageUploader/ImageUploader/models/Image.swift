@@ -9,6 +9,8 @@
 import Foundation
 
 struct Image {
-  let url: URL
-  let displayName: String
+    let url: URL
+    let displayName: String
+    let description: String?
+    let isMain: Bool
 }

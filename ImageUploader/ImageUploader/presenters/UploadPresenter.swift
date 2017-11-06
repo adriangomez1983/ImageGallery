@@ -39,16 +39,17 @@ class UploadPresenter: NSObject {
         uploadView = nil
     }
     
-    func uploadImage(_ image: UIImage?) {
+    func uploadImage(_ image: UIImage?, description imageDescription: String?) {
         guard let imageToUpload = image else {
+            uploadView?.finishLoading()
             uploadView?.showError(ImagesServiceError(description: "No Image to upload", message: "", code: 500))
             return
         }
         
         uploadView?.startLoading()
-        if let imageData = UIImagePNGRepresentation(imageToUpload) {
+        if let imageData = UIImageJPEGRepresentation(imageToUpload, 0) {
             let name = "\(imageData.hashValue).png"
-            imageService.upload(imageData, imageName: name, onCompletion: { [weak self] in
+            imageService.upload(imageData, imageName: name, description: imageDescription, onCompletion: { [weak self] in
                 self?.uploadView?.finishLoading()
                 self?.uploadView?.showSuccess("Image successfully uploaded")
             }, onError: { [weak self] error in
@@ -109,4 +110,8 @@ extension UploadPresenter: CropViewControllerDelegate {
         guard let img = image else { return }
         uploadView?.setPreviewImage(img)
     }
+}
+
+extension UploadPresenter: UITextViewDelegate {
+    
 }
